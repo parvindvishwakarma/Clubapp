@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Club Entry - Ticket Booking</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+
+    <div class="booking-container">
+        <h2>🎟️ Ticket Booking</h2>
+        <p>Please enter your details to verify entry.</p>
+        
+        <form action="/verify" method="POST">
+            <div class="input-group">
+                <label>Full Name</label>
+                <input type="text" name="u_name" placeholder="Enter Your Name" required>
+            </div>
+
+            <div class="input-group">
+                <label>Age</label>
+                <input type="number" name="u_age" placeholder="Enter Your Age" required>
+            </div>
+
+            <div class="input-group">
+                <label>Select Zone</label>
+                <select>
+                    <option>General Entry</option>
+                    <option>VIP Kotha (18+ Only)</option>
+                    <option>Special Guest</option>
+                </select>
+            </div>
+
+            <button type="submit" class="btn">Book My Ticket</button>
+        </form>
+    </div>
+
+</body>
+</html>
